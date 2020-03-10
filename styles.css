@@ -15,11 +15,16 @@
 
     --header-footer-color-font: rgba(189, 195, 199,1.0);
 
-<<<<<<< HEAD
     /* border */
     --border-radius: 15px;
 
 }
+
+    /* Général */
+* {
+    margin: 0;
+    padding: 0; 
+    }
 
     /* main */
 .card{
@@ -31,12 +36,6 @@
     border-radius: var(--border-radius);
 
 }
-=======
-}
 
-* {
-   margin: 0;
-   padding: 0; 
-}
 
->>>>>>> 10dcb3bdca9b5dc2835b9762d14f42beac39579a
+
