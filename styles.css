@@ -16,3 +16,9 @@
     --header-footer-color-font: rgba(189, 195, 199,1.0);
 
 }
+
+* {
+   margin: 0;
+   padding: 0; 
+}
+
