@@ -15,13 +15,29 @@
 
     --header-footer-color-font: rgba(189, 195, 199,1.0);
 
+    /* border */
+    --border-radius: 15px;
+
 }
 
+    /* Général */
 * {
-   margin: 0;
-   padding: 0; 
+    margin: 0;
+    padding: 0; 
+    }
+
+    /* main */
+.card{
+    width : var(--card-width);
+    background-color: var(--card-color-bkg);
+    height: 300px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: var(--border-radius);
+
 }
 
+<<<<<<< HEAD
 footer {
     display: flex;
     border: 2px solid;
@@ -40,4 +56,7 @@ footer {
     list-style-type: none;
 }
 */
+=======
+
+>>>>>>> c8152e4a242f177ed2877ba505cb42915948152e
 
