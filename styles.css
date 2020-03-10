@@ -15,4 +15,18 @@
 
     --header-footer-color-font: rgba(189, 195, 199,1.0);
 
+    /* border */
+    --border-radius: 15px;
+
+}
+
+    /* main */
+.card{
+    width : var(--card-width);
+    background-color: var(--card-color-bkg);
+    height: 300px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: var(--border-radius);
+
 }
