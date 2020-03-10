@@ -1,5 +1,30 @@
+:root {
+    /* size */
+    --header-height: 15vh;
+    --footer-height: 20vh;
+
+    --main-width: 100%;
+
+    --header-footer-width: 100%;
+    --card-width: 90%;
+
+    /* colors */
+    --header-footer-color-bkg: rgba(52, 73, 94,1.0);
+    --main-color-bkg: rgba(189, 195, 199,1.0);
+    --card-color-bkg: rgba(189, 195, 199,0.2);
+
+    --header-footer-color-font: rgba(189, 195, 199,1.0);
+
+}
+
+* {
+   margin: 0;
+   padding: 0; 
+}
+
 footer {
     display: flex;
     border: 2px solid;
     flex-direction: row;
 }
+
