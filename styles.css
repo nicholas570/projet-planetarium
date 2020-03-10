@@ -24,6 +24,12 @@
     padding: 0; 
  }
 
+    /* Général */
+* {
+    margin: 0;
+    padding: 0; 
+    }
+
     /* main */
 .card{
     width : var(--card-width);
@@ -34,3 +40,9 @@
     border-radius: var(--border-radius);
 
 }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> c8152e4a242f177ed2877ba505cb42915948152e
