@@ -20,6 +20,12 @@
 
 }
 
+    /* Général */
+* {
+    margin: 0;
+    padding: 0; 
+    }
+
     /* main */
 .card{
     width : var(--card-width);
@@ -28,13 +34,4 @@
     margin: auto;
     margin-top: 30px;
     border-radius: var(--border-radius);
-
 }
-
-
-
-* {
-   margin: 0;
-   padding: 0; 
-}
-
