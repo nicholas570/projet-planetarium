@@ -2,7 +2,7 @@
     /* size */
     --header-height: 15vh;
     --footer-height: 20vh;
-
+    --first-card-margin-top: calc(var(--header-height) + 2vh);
     --main-width: 100%;
 
     --header-footer-width: 100%;
@@ -40,9 +40,7 @@
     border-radius: var(--border-radius);
 
 }
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> c8152e4a242f177ed2877ba505cb42915948152e
+.first-card {
+    margin-top: var(--first-card-margin-top);
+}
