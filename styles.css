@@ -165,6 +165,13 @@ header ul li a:hover::before {
     display: none;
 }
 
+    /*---------- iFrame ------------------*/
+
+iframe{
+    border: solid black solid;
+    width: 100%;
+}
+
     /*---------- form ---------------*/
 
 form{
