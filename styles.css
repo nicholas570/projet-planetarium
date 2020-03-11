@@ -127,7 +127,7 @@ header ul li a:hover::before {
     display: none;
 }
 
-/*footer*/
+    /*footer*/
 
 li {
     list-style-type: none;
@@ -268,8 +268,30 @@ a {
     #burger.cross .line::after {
         transform: rotate(-45deg);
     }
+
+        /*footer*/
+
+    footer{
+        flex-direction: column;
+        height: 15rem;
+        padding-top: 2rem;
+    }
+
+    #copyright{
+        margin-top: 1.5rem;
+    }
+
+    #icons{
+        margin-top: 1.5rem;
+    }
+
+    #links{
+        margin-top: 1.5rem;
+    }
 }
 
 .first-card {
     margin-top: var(--first-card-margin-top);
 }
+
+    
