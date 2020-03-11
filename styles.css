@@ -9,7 +9,6 @@
     --first-card-margin-top: calc(var(--header-height) + 2vh);
     --banner-margin-top: var(--header-height);
     --banner-heigth: calc(100vh - (var(--header-height)));
-    --banner-width : 100vw;
     --main-width: 100%;
 
     --header-footer-width: 100%;
@@ -58,7 +57,7 @@
     background-attachment: fixed;
     background-size: cover;
     height: var(--banner-heigth);
-    width: var(--banner-width);
+    width: 100%;
 }
 
 
