@@ -12,18 +12,27 @@
     --header-footer-width: 100%;
     --card-width: 90%;
 
+    --programme-parts-sizes: 39% 39% 19%;
+    --programme-first-part-rows-sizes: 10% 75%;
+    --programme-img-width: 70%;
+
     /* colors */
     --header-footer-color-bkg: rgba(52, 73, 94,1.0);
     --main-color-bkg: rgba(189, 195, 199,1.0);
     --card-color-bkg: rgba(189, 195, 199,0.2);
+    --buttons-color-bkg: rgb(134, 134, 247);
+    --buttons-color-font: rgb(255, 255, 255);
 
     --header-footer-color-font: rgba(189, 195, 199,1.0);
 
     /* border */
     --border-radius: 15px;
+    --border-radius-programme-img: 5px;
+    --border-radius-button: 5px;
 
     /* font size */
     --header-link-font-size: 1.3rem;
+    --buttons-font-size: 1.2rem;
 
 
 }
@@ -127,6 +136,71 @@ header ul li a:hover::before {
     display: none;
 }
 
+/* ----------   PROGRAMMES  ------------------ */
+
+.programmes {
+    display: grid;
+    grid-template-columns: var(--programme-parts-sizes);
+    justify-content: space-evenly;
+}
+
+.first-part, .second-part, .third-part {
+    height: 100%;
+}
+
+.first-part {
+    display: grid;
+    grid-template-rows: var(--programme-first-part-rows-sizes);
+    align-content: space-evenly;
+}
+
+.first-part .card-title {
+    text-align: center;
+}
+
+.first-part .img-prog {
+    height: 100%;
+    width: var(--programme-img-width);
+    justify-self: center;
+    background-image: url('/content/img/greg-rakozy-ompaz-dn-9i-unspla.jpg');
+    background-size: cover;
+    border-radius: var(--border-radius-programme-img);
+}
+
+.second-part {
+    text-align: justify;
+    display: grid;
+    align-content: space-evenly;
+}
+
+.third-part {
+    display: grid;
+    align-content: space-evenly;
+}
+
+.third-part .card-price {
+    text-align: center;
+}
+
+.third-part .card-accessibility {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.third-part .card-button {
+    padding: 10px;
+    width: 50%;
+    justify-self: center;
+    background-color: var(--buttons-color-bkg);
+    border: 0;
+    border-radius: var(--border-radius-button);
+    color: var(--buttons-color-font);
+    font-size: var(--buttons-font-size);
+    cursor: pointer;
+}
+
+
 /* -----------------------------------------------------    MOBILE  ---------------------------------------- */
 @media only screen and (max-width: 900px) {
 
@@ -218,6 +292,8 @@ header ul li a:hover::before {
     #burger.cross .line::after {
         transform: rotate(-45deg);
     }
+
+    /* ----------   PROGRAMMES  ------------------ */
 }
 
 .first-card {
