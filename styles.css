@@ -21,7 +21,9 @@
     --main-color-bkg: rgba(189, 195, 199,1.0);
     --card-color-bkg: rgba(189, 195, 199,0.2);
     --buttons-color-bkg: rgb(134, 134, 247);
+    --buttons-color-bkg-hover: rgb(106, 106, 248);
     --buttons-color-font: rgb(255, 255, 255);
+
 
     --header-footer-color-font: rgba(189, 195, 199,1.0);
 
@@ -32,7 +34,8 @@
 
     /* font size */
     --header-link-font-size: 1.3rem;
-    --buttons-font-size: 1.2rem;
+    --programme-price-font-size: 2rem;
+    --buttons-font-size: 1.1rem;
 
 
 }
@@ -51,11 +54,10 @@
 .card{
     width : var(--card-width);
     background-color: var(--card-color-bkg);
-    height: 300px;
     margin: auto;
     margin-top: 30px;
     border-radius: var(--border-radius);
-
+    min-height: 400px;
 }
 
 
@@ -162,7 +164,6 @@ header ul li a:hover::before {
     height: 100%;
     width: var(--programme-img-width);
     justify-self: center;
-    background-image: url('/content/img/greg-rakozy-ompaz-dn-9i-unspla.jpg');
     background-size: cover;
     border-radius: var(--border-radius-programme-img);
 }
@@ -180,6 +181,7 @@ header ul li a:hover::before {
 
 .third-part .card-price {
     text-align: center;
+    font-size: var(--programme-price-font-size);
 }
 
 .third-part .card-accessibility {
@@ -198,6 +200,12 @@ header ul li a:hover::before {
     color: var(--buttons-color-font);
     font-size: var(--buttons-font-size);
     cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+
+.third-part .card-button:hover {
+    transform: scale(0.9);
+    background-color: var(--buttons-color-bkg-hover);
 }
 
 
@@ -294,6 +302,24 @@ header ul li a:hover::before {
     }
 
     /* ----------   PROGRAMMES  ------------------ */
+
+    .programmes {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 30vh auto 20vh;
+        justify-content: space-evenly;
+        grid-row-gap: 15px;
+    }
+
+    .first-part {
+        height: auto;
+        grid-template-rows: auto 60%;
+    }
+
+    .second-part {
+        padding: 0 5% 0 5%;
+    }
+
 }
 
 .first-card {
