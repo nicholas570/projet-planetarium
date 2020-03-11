@@ -45,7 +45,7 @@
 .card {
     width: var(--card-width);
     background-color: var(--card-color-bkg);
-    height: 300px;
+    min-height: 400px;
     margin: auto;
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
@@ -145,13 +145,14 @@ form{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
 }
 
 .champsForm{
-    
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    height: 18rem;
 }
 
 .champsForm input{
@@ -333,7 +334,22 @@ footer a {
         transform: rotate(-45deg);
     }
 
-        /*footer*/
+    /*---------- form ---------------*/
+
+    form{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #comment{
+        margin-top: 0;
+    }
+
+    .submit{
+        margin-bottom: 1rem;
+    }
+
+    /*---------- footer --------------*/
 
     footer{
         flex-direction: column;
