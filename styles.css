@@ -3,6 +3,9 @@
     --header-height: 15vh;
     --footer-height: 10vh;
 
+    --header-grid-template-column: 25% 60% 15%;
+    --header-grid-template-column-mobile: 55% 40% 5%;
+
     --header-nav-mobile-height: 40vh;
     --burger-mobile-height-width: 8vh;
 
@@ -17,6 +20,11 @@
     --programme-parts-sizes: 39% 39% 19%;
     --programme-first-part-rows-sizes: 10% 75%;
     --programme-img-width: 70%;
+
+    --apropos-height-width-img: 250px;
+    --apropos-height-width-img-mobile: 150px;
+    --apropos-parts-sizes: 30% 60%;
+    --apropos-text-template-row: auto 40% auto;
 
     /* colors */
 
@@ -39,6 +47,10 @@
     --header-link-font-size: 1.3rem;
     --programme-price-font-size: 2rem;
     --buttons-font-size: 1.1rem;
+
+    --apropos-first-name-font-size: 1.8rem;
+    --apropos-description-font-size: 1.3rem;
+    --apropos-quotes-font-size: 1.2rem;
 
 
 }
@@ -83,7 +95,7 @@ header {
     background-color: var(--header-footer-color-bkg);
     color: var(--header-footer-color-font);
     display: grid;
-    grid-template-columns: 25% 60% 15%;
+    grid-template-columns: var(--header-grid-template-column);
 }
 
 header a {
@@ -269,11 +281,54 @@ footer a {
 }
 
 
+/* ----------   A PROPOS  ------------------ */
+
+.apropos {
+    display: grid;
+    grid-template-columns: var(--apropos-parts-sizes);
+    justify-content: space-evenly;
+}
+
+.apropos .apropos-img {
+    height: var(--apropos-height-width-img);
+    width: var(--apropos-height-width-img);
+    border-radius: 50%;
+    background-size: cover;
+    align-self: center;
+
+    -webkit-box-shadow: -7px 7px 22px -2px rgba(110,107,110,1);
+-moz-box-shadow: -7px 7px 22px -2px rgba(110,107,110,1);
+box-shadow: -7px 7px 22px -2px rgba(110,107,110,1);
+}
+
+.apropos .apropos-texts {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: var(--apropos-text-template-row);
+    align-content: center;
+    grid-row-gap: 15px;
+}
+
+.apropos-texts .apropos-first-name {
+    font-size: var(--apropos-first-name-font-size);
+}
+
+.apropos-texts .apropos-description {
+    font-size: var(--apropos-description-font-size);
+    text-align: justify;
+}
+
+.apropos-texts .apropos-quote {
+    font-size: var(--apropos-quotes-font-size);
+    font-style: italic;
+}
+
+
 /* -----------------------------------------------------    MOBILE  ---------------------------------------- */
 @media only screen and (max-width: 900px) {
 
     header {
-        grid-template-columns: 50% 40% 10%;
+        grid-template-columns: var(--header-grid-template-column-mobile);
     }
 
     header nav {
@@ -402,10 +457,48 @@ footer a {
         padding: 0 5% 0 5%;
     }
 
+    /* ----------   A-PROPOS  ------------------ */
+
+    .apropos {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        justify-items: center;
+        padding: 3vh 0 3vh 0;
+    }
+
+    .apropos .apropos-img {
+        height: var(--apropos-height-width-img-mobile);
+        width: var(--apropos-height-width-img-mobile);
+        align-self: center;
+        margin-bottom: 3vh;
+    }
+
+    .apropos .apropos-texts {
+        grid-template-rows: auto auto auto;
+    }
+    
+    .apropos-texts .apropos-first-name {
+        font-size: var(--apropos-first-name-font-size);
+        text-align: center;
+    }
+    
+    .apropos-texts .apropos-description {
+        font-size: var(--apropos-description-font-size);
+        padding: 0 5% 0 5%;
+    }
+
+    .apropos-texts .apropos-quote {
+        text-align: center;
+    }
+
 }
 
 .first-card {
     margin-top: var(--first-card-margin-top);
 }
+
+
+
 
     
