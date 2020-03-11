@@ -7,6 +7,9 @@
     --burger-mobile-height-width: 8vh;
 
     --first-card-margin-top: calc(var(--header-height) + 2vh);
+    --banner-margin-top: var(--header-height);
+    --banner-heigth: calc(100vh - (var(--header-height)));
+    --banner-width : 100vw;
     --main-width: 100%;
 
     --header-footer-width: 100%;
@@ -47,6 +50,15 @@
     margin-top: 30px;
     border-radius: var(--border-radius);
 
+}
+#banner{
+    margin-top: var(--banner-margin-top);
+    background-position: bottom;
+    background-image: url("content/img/greg-rakozy-ompaz-dn-9i-unspla.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    height: var(--banner-heigth);
+    width: var(--banner-width);
 }
 
 
