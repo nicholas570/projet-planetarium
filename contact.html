@@ -38,8 +38,26 @@
         <section class="card">
 
         </section>
-        <form class="card">
-
+        <form class="card" method="POST" action="#">
+            <div class="champsForm">
+                <input type="text" placeholder="Prénom">
+                <input type="text" placeholder="Nom">
+                <input type="email" placeholder="@">
+                <select name="sujet" id="sujet">
+                    <option value="choix">Sélectionner une option</option>
+                    <option value="Horaires">Horaires</option>
+                    <option value="Accessibilité">Accessibilité</option>
+                    <option value="Réservation">Réservation</option>
+                    <option value="Autre">Autre</option>
+                </select>
+            </div>
+            <div>
+                <textarea name="comment" id="comment" placeholder="Votre message"></textarea>
+                <div class="submit">
+                    <input type="submit" value="envoyer">
+                </div>
+            </div>
+            
         </form>
     </main>
     
