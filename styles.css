@@ -3,6 +3,10 @@
     --header-height: 15vh;
     --footer-height: 20vh;
 
+    --header-nav-mobile-height: 40vh;
+    --burger-mobile-height-width: 8vh;
+
+    --first-card-margin-top: calc(var(--header-height) + 2vh);
     --main-width: 100%;
 
     --header-footer-width: 100%;
@@ -18,7 +22,15 @@
     /* border */
     --border-radius: 15px;
 
+    /* font size */
+    --header-link-font-size: 1.3rem;
+
+
 }
+* {
+    margin: 0;
+    padding: 0; 
+ }
 
     /* Général */
 * {
@@ -35,3 +47,179 @@
     margin-top: 30px;
     border-radius: var(--border-radius);
 }
+
+
+/* ----------   HEADER  ------------------ */
+header {
+    position: fixed;
+    top: 0;
+    width: var(--header-footer-width);
+    height: var(--header-height);
+    background-color: var(--header-footer-color-bkg);
+    color: var(--header-footer-color-font);
+    display: grid;
+    grid-template-columns: 25% 60% 15%;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--header-footer-color-font);
+}
+
+header .title-h1 {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    background-color: var(--main-color-bkg);
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+}
+
+header h1 {
+    justify-self: center;
+    align-self: center;
+}
+
+header h1 a {
+    color: var(--header-footer-color-bkg);
+}
+
+header nav {
+    width: 100%;
+    display: grid;
+    align-content: flex-end;
+}
+
+header nav ul {
+    width: 100%;
+    margin-bottom: 3vh;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+header ul li a {
+    position: relative;
+    font-size: var(--header-link-font-size);
+    transition: transform 250ms ease-in-out;
+}
+
+header ul li a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: var(--header-footer-color-font);
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    right: 0;
+    border-radius: 2px;
+    transform: scale(0, 1);
+    transition: transform 250ms ease-in-out;
+}
+
+
+header ul li a:hover::before {
+    transform: scale(1, 1);
+}
+
+#burger {
+    display: none;
+}
+
+/* -----------------------------------------------------    MOBILE  ---------------------------------------- */
+@media only screen and (max-width: 900px) {
+
+    header {
+        grid-template-columns: 50% 40% 10%;
+    }
+
+    header nav {
+        position: fixed;
+        top: var(--header-height);
+        width: 100%;
+        z-index: 100;
+        height: 0;
+        overflow: hidden;
+        background-color: var(--header-footer-color-bkg);
+        align-content: inherit;
+        transition: height 250ms ease-in-out;
+    }
+
+    header nav.deployed {
+        height: var(--header-nav-mobile-height);
+    }
+
+    header nav ul {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        justify-items: center;
+    }
+
+    header nav ul li {
+        margin-top: 2vh;
+    }
+
+    #burger {
+        position: absolute;
+        top: 5vh;
+        right: 8vh;
+        display: block;
+        height: var(--burger-mobile-height-width);
+        width: var(--burger-mobile-height-width);
+        display: grid;
+        align-items: center;
+    }
+
+    #burger .line {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 5px;
+        border-radius: 2px;
+        background-color: var(--header-footer-color-font);
+    }
+
+    #burger .line::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 5px;
+        background-color: var(--header-footer-color-font);
+        border-radius: 2px;
+        transform: translateY(-2vh);
+    }
+
+    #burger .line::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 5px;
+        background-color: var(--header-footer-color-font);
+        border-radius: 2px;
+        transform: translateY(2vh);
+    }
+
+    #burger .line, #burger .line::before, #burger .line::after {
+        transition: transform 250ms ease-in-out;
+    }
+
+    #burger.cross .line::before, #burger.cross .line::after {
+        transform: translateY(0);
+    }
+
+    #burger.cross .line::before {
+        transform: rotate(45deg);
+    }
+
+    #burger.cross .line::after {
+        transform: rotate(-45deg);
+    }
+}
+
+.first-card {
+    margin-top: var(--first-card-margin-top);
+}
+
