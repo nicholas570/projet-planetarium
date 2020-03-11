@@ -58,10 +58,7 @@
 .card {
     width: var(--card-width);
     background-color: var(--card-color-bkg);
-<<<<<<< HEAD
     min-height: 400px;
-=======
->>>>>>> 57c8b433eeefd767d7f1150dc6a0e9e1086bed49
     margin: auto;
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
