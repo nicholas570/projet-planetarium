@@ -405,12 +405,13 @@ footer a {
     width: 70%;
     margin: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 .img-actu1 {
     background-image: url("content/img/planet\ of\ pat\ debois\ 200px.jpg");
     width : 30%;
     height: 200px;
+    margin-right: 4vh;
     border-radius: var(--border-radius);
     background-size: cover;
     background-position: center;
@@ -419,30 +420,37 @@ footer a {
     background-image: url("content/img/vue\ de\ la\ terre.jpg");
     width : 30%;
     height: 200px;
+    margin-left: 4vh;
     border-radius: var(--border-radius);
     background-size: cover;
     background-position: center;
 }
 .article-actu1 {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 10vh;
 }
 .article-actu2 {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 10vh;
 }
 .parent-article-actu {
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
+}
+.parent-article-actu > h3{
+    margin-bottom: 4vh;
+}
+.actu2 {
+    align-items: flex-start;
 }
 .article-actu-paragraphe {
-    text-align: left;
+    text-align: justify;
 }
 
 /* ----------   PROGRAMMES  ------------------ */
@@ -769,12 +777,12 @@ box-shadow: -7px 7px 22px -2px rgba(110,107,110,1);
     .img-actu1 {
         width: 80%;
         height: 200px;
-        margin-bottom: 4vh;
+        margin: 0 auto 4vh auto;
     }
     .img-actu2 {
         width: 80%;
         height: 200px;
-        margin-bottom: 4vh;
+        margin: 0 auto 4vh auto;
     }
 
     /* ----------   PROGRAMMES  ------------------ */
