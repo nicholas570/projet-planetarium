@@ -693,6 +693,7 @@ box-shadow: -7px 7px 22px -2px rgba(110,107,110,1);
         flex-direction: column;
         height: 15rem;
         padding-top: 2rem;
+        text-align: center;
     }
 
     #copyright{
