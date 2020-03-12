@@ -165,20 +165,86 @@ header ul li a:hover::before {
     display: none;
 }
 
+
+/*--------------------------------------------- CONTACT -------------------------------------------------------------*/ 
+
+
+    /*---------- Coordonnees ------------------*/
+
+
+#coordonnees{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+#coordonnees li {
+    list-style-type: none;
+}
+
+#firstContact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 4rem;
+}
+
+.iconPhone{
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.5rem;
+    
+}
+
+.fas{
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
+}
+
+.iconHoraire{
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.5rem;
+}
+
+.far{
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
+}
+
+#horaires{
+    display: flex;
+    flex-direction: column;
+}
+
+#nantes{
+    border-radius: var(--border-radius-programme-img);
+}
+
+
     /*---------- iFrame ------------------*/
 
+
 iframe{
-    border: solid black solid;
+    border: var(--border-radius);
     width: 100%;
 }
 
+
     /*---------- form ---------------*/
 
-form{
+
+.form{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+}
+
+#formTitre{
+    text-align: center;
+    padding-top: 2rem;
 }
 
 .champsForm{
@@ -215,14 +281,26 @@ form{
     justify-content: flex-end;
     align-items: flex-end;
     margin-top: 1rem;
+    
 
 }
 
 .submit input{
     width: 6rem;
     height: 2rem;
-    border-radius: 5px;
-    font-size: 1rem;
+    background-color: var(--buttons-color-bkg);
+    border: 0;
+    border-radius: var(--border-radius-button);
+    color: var(--buttons-color-font);
+    font-size: var(--buttons-font-size);
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+    
+}
+
+.submit input:hover {
+    transform: scale(0.9);
+    background-color: var(--buttons-color-bkg-hover);
 }
 
     /*---------- footer --------------*/
@@ -578,18 +656,25 @@ box-shadow: -7px 7px 22px -2px rgba(110,107,110,1);
 
     /*---------- form ---------------*/
 
-    form{
+    .form{
         flex-direction: column;
         align-items: center;
     }
     
     #comment{
         margin-top: 0;
+        width: 20rem;
     }
 
     .submit{
         margin-bottom: 1rem;
     }
+
+    /*---------- coordonées --------------*/  
+
+    #nantes{
+        display: none;
+    }    
 
     /*---------- footer --------------*/
 
