@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Le planétarium de Nantes vous offre une expérecience unique, en famille ou entre amis">
+    <meta name="description" content="Le planétarium de Nantes vous offre une expérecience unique, en famille ou entre amis">
     <meta name="author" content="Morgan, Brice & Nicolas">
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/b22c85a902.js" crossorigin="anonymous"></script>
     <title>Planetarium | Contact</title>
 </head>
-
 <body>
     <header>
         <div class="title-h1">
@@ -35,70 +32,35 @@
         </div>
     </header>
     <main>
-        <section id="coordonnees" class="card first-card">
-            <div id="firstContact">
-                <div>
-                    <div class="iconPhone">
-                        <h2>Nous contacter</h2> <i class="fas fa-phone"></i>
-                    </div>
-                    <ul>
-                        <li>8 rue des Acadiens, 44100 Nantes</li>
-                        <li>02 40 73 99 23</li>
-                    </ul>
-                </div>
-                <div id="horaires">
-                    <div class="iconHoraire">
-                        <h2>Horaires</h2> <i class="far fa-clock"></i>
-                    </div>
-                    <ul>
-                        <li>lundi 10h/12h 14h/18h</li>
-                        <li>mardi 10h/12h 14h/18h</li>
-                        <li>mercredi 10h/12h 14h/18h</li>
-                        <li>jeudi 10h/12h 14h/18h</li>
-                        <li>vendredi 10h/12h 14h/18h</li>
-                        <li>samedi 13h30/18h</li>
-                        <li>dimanche 14h/18h</li>
-                    </ul>
-                    <div>
-                        <p><strong>Réservations sur place ou via internet</strong></p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <img id="nantes" src="content/img/nantes.jpg" alt="le voyage à Nantes">
-            </div>
+        <section class="card first-card">
+
         </section>
         <section class="card">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.732968827108!2d-1.579663584559635!3d47.20223887915995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ebf59eb5e0bb%3A0x3f6a61280d65775!2sPlan%C3%A9tarium!5e0!3m2!1sfr!2sfr!4v1583939049372!5m2!1sfr!2sfr"
-                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-                tabindex="0"></iframe>
+
         </section>
         <form class="card" method="POST" action="#">
-            <h2 id="formTitre">Pour toute demande complémentaire merci de remplir ce formulaire</h2>
-            <div class="form">
-                <div class="champsForm">
-                    <input type="text" placeholder="Prénom" required>
-                    <input type="text" placeholder="Nom" required>
-                    <input type="email" placeholder="@" required>
-                    <select name="sujet" id="sujet">
-                        <option value="choix">Sélectionner une option</option>
-                        <option value="Horaires">Horaires</option>
-                        <option value="Accessibilité">Accessibilité</option>
-                        <option value="Réservation">Réservation</option>
-                        <option value="Autre">Autre</option>
-                    </select>
-                </div>
-                <div>
-                    <textarea name="comment" id="comment" placeholder="Votre message"></textarea>
-                    <div class="submit">
-                        <input type="submit" value="envoyer">
-                    </div>
+            <div class="champsForm">
+                <input type="text" placeholder="Prénom">
+                <input type="text" placeholder="Nom">
+                <input type="email" placeholder="@">
+                <select name="sujet" id="sujet">
+                    <option value="choix">Sélectionner une option</option>
+                    <option value="Horaires">Horaires</option>
+                    <option value="Accessibilité">Accessibilité</option>
+                    <option value="Réservation">Réservation</option>
+                    <option value="Autre">Autre</option>
+                </select>
+            </div>
+            <div>
+                <textarea name="comment" id="comment" placeholder="Votre message"></textarea>
+                <div class="submit">
+                    <input type="submit" value="envoyer">
                 </div>
             </div>
+            
         </form>
     </main>
-
+    
     <footer>
         <div>
             <ul id="links">
@@ -112,20 +74,16 @@
         <div>
             <ul id="icons">
                 <li><a href="https://twitter.com/nasa" class="logo"><i class="fab fa-twitter fa-3x"></i></a></li>
-                <li><a href="https://www.facebook.com/planetariumdenantes/" class="logo"><i
-                            class="fab fa-facebook-f fa-3x"></i></a></li>
-                <li><a href="https://www.instagram.com/explore/tags/planetarium/?hl=fr" class="logo"><i
-                            class="fab fa-instagram fa-3x"></i></a></li>
-                <li><a href="https://www.youtube.com/watch?v=thV86zfzHiw" class="logo"><i
-                            class="fab fa-youtube fa-3x"></i></a></li>
+                <li><a href="https://www.facebook.com/planetariumdenantes/" class="logo"><i class="fab fa-facebook-f fa-3x"></i></a></li>
+                <li><a href="https://www.instagram.com/explore/tags/planetarium/?hl=fr" class="logo"><i class="fab fa-instagram fa-3x"></i></a></li>
+                <li><a href="https://www.youtube.com/watch?v=thV86zfzHiw" class="logo"><i class="fab fa-youtube fa-3x"></i></a></li>
             </ul>
         </div>
-
+    
         <div id="copyright">
             <p> &#169 2020 To infinity and beyond</p>
         </div>
     </footer>
     <script type="text/javascript" src="script.js"></script>
 </body>
-
 </html>
