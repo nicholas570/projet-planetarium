@@ -610,6 +610,88 @@ box-shadow: -7px 7px 22px -2px rgba(110,107,110,1);
     #links{
         margin-top: 1.5rem;
     }
+    /* ----------   ACCUEIL     ------------------ */
+
+    /* ARTICLE PLANETARIUM */
+    
+    .article-planetarium > div{
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+    }
+    .article-title {
+        margin-bottom: 8vh;
+    }
+    .article-g-et-d {
+        flex-direction: column;
+        max-width: none;
+        width: 100%;
+        margin: auto;
+        align-items: center;
+    }
+    .img-planetarium1 {
+        width: 80%;
+        height: 350px;
+        margin-bottom: 4vh;
+    }
+    .img-planetarium2 {
+        width: 80%;
+        height: 200px;
+        margin-bottom: 4vh;
+    }
+    .parent-article-paragraphe {
+        align-items: center;
+        margin-bottom: 4vh;
+        width: 80%;
+    }
+    .parent-article-paragraphe > h3{
+        text-align: center;
+        margin-bottom: 4vh;
+    }
+    .article-paragraphe {
+        text-align: center;
+    }
+    /* ARTICLE ACTUALITE */
+    .actu-section {
+        height: auto;
+    }
+    .article-actu1 {
+        flex-direction: column;
+        max-width: none;
+        width: 100%;
+        margin: auto;
+        align-items: center;
+    }
+    .article-actu2 {
+        flex-direction: column;
+        max-width: none;
+        width: 100%;
+        margin: auto;
+        align-items: center;
+    }
+    .parent-article-actu {
+        align-items: center;
+        margin-bottom: 4vh;
+        width: 80%;
+    }
+    .parent-article-actu > h3{
+        text-align: center;
+        margin-bottom: 4vh;
+    }
+    .article-actu-paragraphe {
+        text-align: center;
+    }
+    .img-actu1 {
+        width: 80%;
+        height: 200px;
+        margin-bottom: 4vh;
+    }
+    .img-actu2 {
+        width: 80%;
+        height: 200px;
+        margin-bottom: 4vh;
+    }
+
     /* ----------   PROGRAMMES  ------------------ */
 
     .programmes {
