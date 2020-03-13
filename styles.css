@@ -9,7 +9,8 @@
     --header-nav-mobile-height: 40vh;
     --burger-mobile-height-width: 8vh;
 
-    --first-card-margin-top: calc(var(--header-height) + 2vh);
+    --card-margin-top-bottom: 12vh;
+    --first-card-margin-top: calc(var(--header-height) + var(--card-margin-top-bottom));
     --banner-margin-top: var(--header-height);
     --banner-heigth: calc(100vh - (var(--header-height)));
     --main-width: 100%;
@@ -29,8 +30,8 @@
     /* colors */
 
     --header-footer-color-bkg: rgba(52, 73, 94,1.0);
-    --main-color-bkg: rgba(189, 195, 199,1.0);
-    --card-color-bkg: rgba(189, 195, 199,0.2);
+    --body-color-bkg: rgb(141, 163, 185);
+    --card-color-bkg: rgba(189, 195, 199, 1.0);
     --buttons-color-bkg: rgb(134, 134, 247);
     --buttons-color-bkg-hover: rgb(106, 106, 248);
     --buttons-color-font: rgb(255, 255, 255);
@@ -44,39 +45,65 @@
     --border-radius-button: 5px;
 
     /* font size */
-    --header-link-font-size: 1.3rem;
+    --header-h1-font-size: 1.8rem;
+    --header-link-font-size: 1.1rem;
     --programme-price-font-size: 2rem;
     --buttons-font-size: 1.1rem;
+    --p-a-font-size: 1.1rem;
 
     --apropos-first-name-font-size: 1.8rem;
     --apropos-description-font-size: 1.3rem;
     --apropos-quotes-font-size: 1.2rem;
 
 
-}
+    --p-a-font-size-mobile: 1rem;
+    --header-h1-font-size-mobile: 1.5rem;
+    --h2-font-size-mobile: 1.3rem;
+    --header-link-font-size-mobile: 1rem;
+    --programme-price-font-size-mobile: 1.6rem;
+    --buttons-font-size-mobile: 1rem;
+    --apropos-first-name-font-size-mobile: 1.8rem;
+    --apropos-description-font-size-mobile: 1.3rem;
+    --apropos-quotes-font-size-mobile: 1.2rem;
 
-* {
-    margin: 0;
-    padding: 0;
+    /* box-shadow */
+
+    --header-box-shadow: 0px 4px 11px 0px rgba(0,0,0,0.75);
+    --footer-box-shadow: 0px -2px 11px 0px rgba(0,0,0,0.75);
+
+    
+
 }
 
 /* Général */
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Bellota Text', cursive;
+    font-size: var(--p-a-font-size);
+}
+
+h1 a {
+    font-size: var(--header-h1-font-size);
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 /* main */
+body {
+    background-color: var(--body-color-bkg);
+}
+
 .card {
     width: var(--card-width);
     background-color: var(--card-color-bkg);
     min-height: 400px;
-    margin: auto;
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
+    margin: var(--card-margin-top-bottom) auto var(--card-margin-top-bottom) auto;
     border-radius: var(--border-radius);
     min-height: 400px;
+    font-size: var(--p-a-font-size);
+    padding: 4vh 2vh 4vh 2vh;
 }
+
 #banner{
     margin-top: var(--banner-margin-top);
     background-position: bottom;
@@ -98,6 +125,7 @@ header {
     color: var(--header-footer-color-font);
     display: grid;
     grid-template-columns: var(--header-grid-template-column);
+    box-shadow: var(--header-box-shadow);
 }
 
 header a {
@@ -109,7 +137,7 @@ header .title-h1 {
     height: 100%;
     width: 100%;
     display: grid;
-    background-color: var(--main-color-bkg);
+    background-color: var(--card-color-bkg);
     clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
 }
 
@@ -173,10 +201,14 @@ header ul li a:hover::before {
 
 
 #coordonnees{
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 40% 30%;
+    justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
+}
+
+#coordonnees img {
+    height: 100%;
 }
 
 #coordonnees li {
@@ -187,35 +219,34 @@ header ul li a:hover::before {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin-left: 4rem;
+    row-gap: 6vh;
 }
 
-.iconPhone{
-    display: flex;
-    flex-direction: row;
-    margin-top: 0.5rem;
-    
+.title-adress, #horaires {
+    text-align: center;
 }
 
-.fas{
-    margin-top: 0.5rem;
-    margin-left: 1.5rem;
+.title-adress h2, .horaires-title{
+    margin-bottom: 2vh;
 }
 
-.iconHoraire{
-    display: flex;
-    flex-direction: row;
-    margin-top: 0.5rem;
-}
-
-.far{
-    margin-top: 0.5rem;
-    margin-left: 1.5rem;
+.title-adress a {
+    color: var(--header-footer-color-bkg);
 }
 
 #horaires{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.horaires-title {
+    display: block;
+    grid-template-columns: 10% 50%;
+    justify-content: center;
+}
+
+.reserv-internet {
+    margin-top: 6vh;
 }
 
 #nantes{
@@ -225,10 +256,14 @@ header ul li a:hover::before {
 
     /*---------- iFrame ------------------*/
 
+#google-map {
+    padding: 0;
+}
 
-iframe{
-    border: var(--border-radius);
+#google-map iframe {
     width: 100%;
+    border-radius: var(--border-radius);
+    margin: 0;
 }
 
 
@@ -318,6 +353,7 @@ footer {
     padding: 3rem 5rem 3rem 5rem;
     background-color: var(--header-footer-color-bkg);
     color: var(--header-footer-color-font);
+    box-shadow: var(--footer-box-shadow);
 }
 
 footer a {
@@ -579,6 +615,27 @@ box-shadow: -7px 7px 22px -2px rgba(110,107,110,1);
 /* -----------------------------------------------------    MOBILE  ---------------------------------------- */
 @media only screen and (max-width: 900px) {
 
+    * {
+        font-size: var(--p-a-font-size-mobile);
+    }
+    
+    h1 a {
+        font-size: var(--header-h1-font-size-mobile);
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    h2 {
+        font-size: var(--h2-font-size-mobile);
+    }
+
+    .card {
+        border-radius: inherit;
+        margin-right: 0;
+        margin-left: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
     header {
         grid-template-columns: var(--header-grid-template-column-mobile);
     }
@@ -685,13 +742,51 @@ box-shadow: -7px 7px 22px -2px rgba(110,107,110,1);
 
     .submit{
         margin-bottom: 1rem;
+        justify-content: center;
     }
 
-    /*---------- coordonées --------------*/  
+    .submit input {
+        font-size: var(--buttons-font-size-mobile);
+    }
 
+    #links a {
+        font-size: var(--header-link-font-size-mobile);
+    }
+
+    /*---------- coordonées --------------*/
+
+    #google-map iframe {
+        border-radius: inherit;
+    }
+
+    #coordonnees{
+        display: grid;
+        grid-template-columns: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #firstContact{
+        text-align: center;
+    }
+    
+    .title-adress h2, .horaires-title{
+        margin-bottom: 2vh;
+    }
+    
+    #horaires{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    
+    .horaires-title {
+        display: block;
+        justify-content: center;
+    }
+    
     #nantes{
         display: none;
-    }    
+    }   
 
     /*---------- footer --------------*/
 
@@ -803,6 +898,7 @@ box-shadow: -7px 7px 22px -2px rgba(110,107,110,1);
         grid-template-rows: 30vh auto 20vh;
         justify-content: space-evenly;
         grid-row-gap: 15px;
+        padding: 6vh 0 6vh 0;
     }
 
     .first-part {
@@ -810,8 +906,28 @@ box-shadow: -7px 7px 22px -2px rgba(110,107,110,1);
         grid-template-rows: auto 60%;
     }
 
+    .first-part h2 {
+        padding: 0 5% 0 5%;
+    }
+
     .second-part {
         padding: 0 5% 0 5%;
+        margin-bottom: 2vh;
+    }
+
+    .third-part .card-price {
+        font-size: var(--programme-price-font-size-mobile);
+    }
+
+    .card-button, .card-accessibility, .card-price {
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+    }
+
+    .third-part .card-button {
+        font-size: var(--buttons-font-size-mobile);
+        justify-self: center;
+        width: 30%;
     }
 
     /* ----------   A-PROPOS  ------------------ */
@@ -836,18 +952,21 @@ box-shadow: -7px 7px 22px -2px rgba(110,107,110,1);
     }
     
     .apropos-texts .apropos-first-name {
-        font-size: var(--apropos-first-name-font-size);
+        font-size: var(--apropos-first-name-font-size-mobile);
         text-align: center;
     }
     
     .apropos-texts .apropos-description {
-        font-size: var(--apropos-description-font-size);
+        font-size: var(--apropos-description-font-size-mobile);
         padding: 0 5% 0 5%;
     }
 
     .apropos-texts .apropos-quote {
+        font-size: var(--apropos-quotes-font-size-mobile);
         text-align: center;
     }
+
+    
 
 }
 
