@@ -35,6 +35,7 @@
     --buttons-color-bkg: rgb(134, 134, 247);
     --buttons-color-bkg-hover: rgb(106, 106, 248);
     --buttons-color-font: rgb(255, 255, 255);
+    --font-color:  rgb(28, 39, 51);
 
 
     --header-footer-color-font: rgba(189, 195, 199, 1.0);
@@ -46,6 +47,7 @@
 
     /* font size */
     --header-h1-font-size: 1.8rem;
+    --h2-font-size: 1.5rem;
     --header-link-font-size: 1.1rem;
     --programme-price-font-size: 2rem;
     --buttons-font-size: 1.1rem;
@@ -71,7 +73,7 @@
     --header-box-shadow: 0px 4px 11px 0px rgba(0,0,0,0.75);
     --footer-box-shadow: 0px -2px 11px 0px rgba(0,0,0,0.75);
 
-    
+   
 
 }
 
@@ -83,9 +85,17 @@
     font-size: var(--p-a-font-size);
 }
 
+p, h1, h2, h3, #coordonnees li, .fa-clock, .fa-phone, .fa-wheelchair, .fa-deaf, .fa-eye-slash {
+   color:var(--font-color);
+}
+
 h1 a {
     font-size: var(--header-h1-font-size);
     font-family: 'Josefin Sans', sans-serif;
+}
+
+h2{
+    font-size: var(--h2-font-size-mobile);
 }
 
 /* main */
@@ -237,6 +247,7 @@ header ul li a:hover::before {
 #horaires{
     display: grid;
     grid-template-columns: 100%;
+    margin-top: 4vh;
 }
 
 .horaires-title {
@@ -287,21 +298,28 @@ header ul li a:hover::before {
     flex-direction: column;
     justify-content: flex-start;
     height: 18rem;
+    border: none;
 }
 
 .champsForm input{
     width: 20rem;
     height: 1.5rem;
-    border-radius: 5px ;
+    border-radius: 25px;
     margin-top: 2rem;
-    padding: 0.2rem;
+    padding: 1vh 2vh 1vh 2vh;
+    background-color: var(--header-footer-color-bkg);
+    border: none;
 }
 
 #sujet{
-    width: 20rem;
-    height: 1.5rem;
+    width: 21rem;
     margin-top: 2rem;
     border-radius: var(--border-radius-button);
+    background-color: var(--header-footer-color-bkg);
+    color: var(--header-footer-color-font);
+    border: none;
+    padding: 1vh 2vh 1vh 2vh;
+    align-self: center;
 }
 
 #comment{
@@ -310,11 +328,19 @@ header ul li a:hover::before {
     width: 30rem;
     border-radius: 5px ;
     margin-top: 2rem;
+    background-color: var(--header-footer-color-bkg);
+    color: var(--header-footer-color-font);
+    border: none;
 }
 
 textarea{
-    padding: 0.5rem;
+    padding: 0.5rem;   
 }
+
+::placeholder{
+    color: var(--header-footer-color-font);
+}
+
 
 .submit{
     display: flex;
@@ -395,6 +421,11 @@ footer a {
     justify-content: flex-end;
     align-items: flex-end;
     height: 8rem;
+    
+}
+
+#copyright p{
+    color: var(--header-footer-color-font);
 }
 /* ----------   ACCUEIL     ------------------ */
 
@@ -531,6 +562,7 @@ footer a {
     justify-self: center;
     background-size: cover;
     border-radius: var(--border-radius-programme-img);
+    background-position: center;
 }
 
 .second-part {
