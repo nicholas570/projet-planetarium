@@ -270,14 +270,14 @@ header ul li a:hover::before {
     /*---------- form ---------------*/
 
 
-.form{
+.displayForm{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
 
-#formTitre{
+#formTitle{
     text-align: center;
     padding-top: 2rem;
 }
@@ -294,13 +294,14 @@ header ul li a:hover::before {
     height: 1.5rem;
     border-radius: 5px ;
     margin-top: 2rem;
+    padding: 0.2rem;
 }
 
 #sujet{
     width: 20rem;
     height: 1.5rem;
     margin-top: 2rem;
-
+    border-radius: var(--border-radius-button);
 }
 
 #comment{
@@ -309,6 +310,10 @@ header ul li a:hover::before {
     width: 30rem;
     border-radius: 5px ;
     margin-top: 2rem;
+}
+
+textarea{
+    padding: 0.5rem;
 }
 
 .submit{
@@ -650,6 +655,7 @@ box-shadow: -7px 7px 22px -2px rgba(110,107,110,1);
         background-color: var(--header-footer-color-bkg);
         align-content: inherit;
         transition: height 250ms ease-in-out;
+        box-shadow: var(--header-box-shadow);
     }
 
     header nav.deployed {
@@ -730,7 +736,7 @@ box-shadow: -7px 7px 22px -2px rgba(110,107,110,1);
 
     /*---------- form ---------------*/
 
-    .form{
+    .displayForm{
         flex-direction: column;
         align-items: center;
     }
