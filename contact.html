@@ -80,7 +80,7 @@
         </section>
 
         <form class="card" method="POST" action="#">
-            <h2 id="formTitle">Pour toute demande complémentaire, merci de remplir de formulaire</h2>
+            <h2 class="formTitle">Pour toute demande complémentaire, merci de remplir de formulaire</h2>
             <div class="displayForm">
                 <div class="champsForm">
                     <input type="text" placeholder="Prénom">
@@ -103,89 +103,98 @@
             </div>
         </form>
 
-        <form class="card" method="POST" action="#" oninput = "functionScore()">
-            <h2 id="formScore">Formulaire de satisfaction</h2>
+        <form class="card questions-form" method="POST" action="#" oninput = "functionScore()">
+            <h2 class="formTitle">Formulaire de satisfaction</h2>
             <div class="question-card">
-            <p class="question">Quelle animation avez vous préféré?</p>
-                <div>
-                    <label for="question1-answer1">GIT 2885 - La super galaxie (7 ans +)</label>
-                    <input id="question1-answer1" name="question1" type="radio" value="1">
-                </div>
-
-                <div>
-                    <label for="question1-answer2">LA GALAXIE PATRICK DEBOIS (7 ans +)</label>
-                    <input id="question1-answer2" name="question1" type="radio" value="1">
-                </div>
-
-                <div>
-                    <label for="question1-answer3">O&#217; SONT ILS? (7 ans +)</label>
-                    <input id="question1-answer3" name="question1" type="radio" value="1">
-                </div>
-                
-                <div>
-                    <input id="question1-answer3" name="question1" type="radio" value="0">
-                    <label for="question1-answer3">Aucune</label>
-                </div>
-                
+                <p class="question">Quelle animation avez vous préféré?</p>
+                <div class="question-items">
+                    <div>
+                        <label for="question1-answer1">GIT 2885 - La super galaxie (7 ans +)</label>
+                        <input id="question1-answer1" name="question1" type="radio" value="1">
+                    </div>
+    
+                    <div>
+                        <label for="question1-answer2">LA GALAXIE PATRICK DEBOIS (7 ans +)</label>
+                        <input id="question1-answer2" name="question1" type="radio" value="1">
+                    </div>
+    
+                    <div>
+                        <label for="question1-answer3">O&#217; SONT ILS? (7 ans +)</label>
+                        <input id="question1-answer3" name="question1" type="radio" value="1">
+                    </div>
+                    
+                    <div>
+                        <label for="question1-answer3">Aucune</label>
+                        <input id="question1-answer3" name="question1" type="radio" value="0">
+                    </div> 
+                </div>      
             </div>
             
             <div class="question-card">
                 <p class="question">Comment s'est passée votre visite au planétarium ?</p>
-                <div>
-                    <label for="question2-answer1">Plutôt bien</label>
-                    <input id="question2-answer1" name="question2" type="radio" value="1">
-                </div>
-                <div>
-                    <label for="question2-answer2">Plutôt pas bien</label>
-                    <input id="question2-answer2" name="question2" type="radio" value="0">
-                </div>   
+                <div class="question-items">
+                    <div>
+                        <label for="question2-answer1">Plutôt bien</label>
+                        <input id="question2-answer1" name="question2" type="radio" value="1">
+                    </div>
+                    <div>
+                        <label for="question2-answer2">Plutôt pas bien</label>
+                        <input id="question2-answer2" name="question2" type="radio" value="0">
+                    </div>
+                </div>  
             </div>
 
             <div class="question-card">
                 <p class="question">Comment avez-vous trouvé l'accueil ?</p>
-                <div>
-                    <label for="question3-answer1">Plutôt bien</label>
-                    <input id="question3-answer1" name="question3" type="radio" value="1">
-                </div>
-                <div>
-                    <label for="question3-answer2">Plutôt pas bien</label>
-                    <input id="question3-answer2" name="question3" type="radio" value="0">
-                </div>   
+                <div class="question-items">
+                    <div>
+                        <label for="question3-answer1">Plutôt bien</label>
+                        <input id="question3-answer1" name="question3" type="radio" value="1">
+                    </div>
+                    <div>
+                        <label for="question3-answer2">Plutôt pas bien</label>
+                        <input id="question3-answer2" name="question3" type="radio" value="0">
+                    </div> 
+                </div>  
             </div>
 
             <div class="question-card">
                 <p class="question">Que pensez-vous de l'accessibilité ?</p>
-                <div>
-                    <label for="question4-answer1">Plutôt bien</label>
-                    <input id="question4-answer1" name="question4" type="radio" value="1">
+                <div class="question-items">
+                    <div>
+                        <label for="question4-answer1">Plutôt bien</label>
+                        <input id="question4-answer1" name="question4" type="radio" value="1">
+                    </div>
+                    <div>
+                        <label for="question4-answer2">Plutôt pas bien</label>
+                        <input id="question4-answer2" name="question4" type="radio" value="0">
+                    </div> 
                 </div>
-                <div>
-                    <label for="question4-answer2">Plutôt pas bien</label>
-                    <input id="question4-answer2" name="question4" type="radio" value="0">
-                </div>   
             </div>
 
             <div class="question-card">
                 <p class="question">Suite à votre visite, recommanderiez vous le Planétarium?</p>
-                <div>
-                    <label for="question5-answer1">0</label>
-                    <input id="question6-answer1" name="question6" type="radio" value="0">
+                <div class="question-items-last">
+                    <div>
+                        <label for="question5-answer1">0</label>
+                        <input id="question6-answer1" name="question6" type="radio" value="0">
+                    </div>
+                    <div>
+                        <label for="question6-answer2">1</label>
+                        <input id="question6-answer2" name="question6" type="radio" value="1">
+                    </div>
+                    <div>
+                        <label for="question6-answer3">2</label>
+                        <input id="question6-answer3" name="question6" type="radio" value="2">
+                    </div>
+                    <div>
+                        <label for="question6-answer4">3</label>
+                        <input id="question6-answer4" name="question6" type="radio" value="3">
+                    </div> 
                 </div>
-                <div>
-                    <label for="question6-answer2">1</label>
-                    <input id="question6-answer2" name="question6" type="radio" value="1">
-                </div>
-                <div>
-                    <label for="question6-answer3">2</label>
-                    <input id="question6-answer3" name="question6" type="radio" value="2">
-                </div>
-                <div>
-                    <label for="question6-answer4">3</label>
-                    <input id="question6-answer4" name="question6" type="radio" value="3">
-                </div>  
             </div>
 
-            <p>Notre note : <output name="score">0</output></p>
+            <p id="note">Notre note : <output name="score">0</output></p>
             
         </form>
     </main>
@@ -219,4 +228,4 @@
     <script type="text/javascript" src="script.js"></script>
 </body>
 
-</html>
+</html>555555(55555

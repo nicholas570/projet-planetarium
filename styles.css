@@ -73,6 +73,9 @@
     --header-box-shadow: 0px 4px 11px 0px rgba(0,0,0,0.75);
     --footer-box-shadow: 0px -2px 11px 0px rgba(0,0,0,0.75);
 
+    /* Paddings */
+    --question-card-padding: 2vh;
+
    
 
 }
@@ -288,9 +291,10 @@ header ul li a:hover::before {
     align-items: center;
 }
 
-#formTitle{
+.formTitle{
     text-align: center;
     padding-top: 2rem;
+    font-size: var(--h2-font-size);
 }
 
 .champsForm{
@@ -368,6 +372,51 @@ textarea{
     transform: scale(0.9);
     background-color: var(--buttons-color-bkg-hover);
 }
+
+    /*---------- Questionnaire --------------*/
+    .questions-form{
+        display: grid;
+        grid-template-columns: 50%;
+        justify-content: center;
+        row-gap: 2vh;
+    }
+
+    .question-card {
+        background-color: var(--header-footer-color-bkg);
+        border-radius: var(--border-radius);
+        color: var(--header-footer-color-font);
+        padding: var(--question-card-padding);
+        display: grid;
+        grid-template-columns: 50%;
+        justify-content: center;
+    }
+
+    .question-items {
+        margin-top: 2vh;
+    }
+
+    .question-items div{
+        display: grid;
+        grid-template-columns: 70% 10%;
+    }
+
+    .question-items-last {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 2vh;
+    }
+
+    .question-items-last div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .question-card p {
+        text-align: center;
+        color: var(--header-footer-color-font);
+        font-size: var(--apropos-description-font-size);
+    }
+    
 
     /*---------- footer --------------*/
 

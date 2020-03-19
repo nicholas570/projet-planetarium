@@ -12,8 +12,8 @@ burger.addEventListener("click", moveMenu);
 
 /* Questionnaire */
 
-const score = document.getElementByName('score').value;
-
+const score = document.getElementsByName('score');
+const question1 = document.getElementsByName('question1');value;
 const functionScore = (score) => {
     parseInt(question1.value || 0)
     + parseInt(question2.value || 0) 
