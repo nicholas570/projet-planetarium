@@ -387,7 +387,7 @@ textarea{
         color: var(--header-footer-color-font);
         padding: var(--question-card-padding);
         display: grid;
-        grid-template-columns: 50%;
+        grid-template-columns: 80%;
         justify-content: center;
     }
 
@@ -404,6 +404,11 @@ textarea{
         display: flex;
         justify-content: space-evenly;
         margin-top: 2vh;
+    }
+
+    .question-items div input {
+        height: 1.5vh;
+        width: 1.5vh;
     }
 
     .question-items-last div {
@@ -706,6 +711,10 @@ box-shadow: -7px 7px 22px -2px rgba(110,107,110,1);
 /* -----------------------------------------------------    MOBILE  ---------------------------------------- */
 @media only screen and (max-width: 900px) {
 
+    .hidden-mobile {
+        display: none;
+    }
+
     * {
         font-size: var(--p-a-font-size-mobile);
     }
@@ -843,6 +852,32 @@ box-shadow: -7px 7px 22px -2px rgba(110,107,110,1);
 
     #links a {
         font-size: var(--header-link-font-size-mobile);
+    }
+
+    /*---------- Questionnaire ---------------*/
+
+    .questions-form{
+        grid-template-columns: 100%;
+    }
+
+    .question-card {
+        grid-template-columns: 95%;
+    }
+
+    .question-items div{
+        display: grid;
+        grid-template-columns: 95% 5%;
+    }
+
+    .question-card p {
+        text-align: center;
+        color: var(--header-footer-color-font);
+        font-size: var(--apropos-description-font-size-mobile);
+    }
+
+    .questions-form .submit {
+        display: flex;
+        justify-content: center;
     }
 
     /*---------- coordonées --------------*/
