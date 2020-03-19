@@ -8,3 +8,17 @@ function moveMenu(){
 }
 
 burger.addEventListener("click", moveMenu);
+
+
+/* Questionnaire */
+
+const score = document.getElementByName('score').value;
+
+const functionScore = (score) => {
+    parseInt(question1.value || 0)
+    + parseInt(question2.value || 0) 
+    + parseInt(question3.value || 0);
+    + parseInt(question4.value || 0)
+    + parseInt(question5.value || 0)
+
+}
