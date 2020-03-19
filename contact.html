@@ -103,7 +103,7 @@
             </div>
         </form>
 
-        <form class="card questions-form" method="POST" action="#" oninput = "functionScore()">
+        <form class="card questions-form" method="POST" action="#" oninput="score.value=parseInt(question1.value || 0)+parseInt(question2.value || 0)+parseInt(question3.value || 0)+parseInt(question4.value || 0)+parseInt(question5.value || 0)">
             <h2 class="formTitle">Formulaire de satisfaction</h2>
             <div class="question-card">
                 <p class="question">Quelle animation avez vous préféré?</p>
@@ -177,24 +177,27 @@
                 <div class="question-items-last">
                     <div>
                         <label for="question5-answer1">0</label>
-                        <input id="question6-answer1" name="question6" type="radio" value="0">
+                        <input id="question5-answer1" name="question5" type="radio" value="0">
                     </div>
                     <div>
-                        <label for="question6-answer2">1</label>
-                        <input id="question6-answer2" name="question6" type="radio" value="1">
+                        <label for="question5-answer2">1</label>
+                        <input id="question5-answer2" name="question5" type="radio" value="1">
                     </div>
                     <div>
-                        <label for="question6-answer3">2</label>
-                        <input id="question6-answer3" name="question6" type="radio" value="2">
+                        <label for="question5-answer3">2</label>
+                        <input id="question5-answer3" name="question5" type="radio" value="2">
                     </div>
                     <div>
-                        <label for="question6-answer4">3</label>
-                        <input id="question6-answer4" name="question6" type="radio" value="3">
+                        <label for="question5-answer4">3</label>
+                        <input id="question5-answer4" name="question5" type="radio" value="3">
                     </div> 
                 </div>
             </div>
 
-            <p id="note">Notre note : <output name="score">0</output></p>
+            <p id="note">Notre note : <output name="score">0</output>/7</p>
+            <div class="submit">
+                <input type="submit" value="envoyer">
+            </div>
             
         </form>
     </main>

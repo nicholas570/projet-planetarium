@@ -416,6 +416,11 @@ textarea{
         color: var(--header-footer-color-font);
         font-size: var(--apropos-description-font-size);
     }
+
+    .questions-form .submit {
+        display: flex;
+        justify-content: center;
+    }
     
 
     /*---------- footer --------------*/
