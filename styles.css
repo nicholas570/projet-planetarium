@@ -369,6 +369,15 @@ textarea{
     background-color: var(--buttons-color-bkg-hover);
 }
 
+    /*---------- Satisfaction --------------*/
+
+    .question-card {
+        background-color: rgb(161, 161, 161);
+        display: grid;
+        grid-template-columns: 100%;
+        justify-items: center;
+    }
+
     /*---------- footer --------------*/
 
 footer li {
