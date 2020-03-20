@@ -10,6 +10,9 @@ function moveMenu(){
 burger.addEventListener("click", moveMenu);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 855631bc068f2d7c03ca3e58ea5a4e9bea792f44
 /* Questionnaire */
 
 const question1 = document.getElementsByName('question1');
@@ -26,6 +29,7 @@ const scoreFunction = () => {const result = parseInt(question1.value || 0)
         console.log(document.getElementsByName('score').innerHTML = `${result}`);
 
 };
+<<<<<<< HEAD
 =======
 
 /* ------------ GoogleMap---------------------------- */
@@ -45,3 +49,5 @@ mapButton.addEventListener('click', mapShow);
 googleMap.addEventListener('click', mapHide);
 
 >>>>>>> aefb8e5942fa3101a479473212f50dc8be097cde
+=======
+>>>>>>> 855631bc068f2d7c03ca3e58ea5a4e9bea792f44
