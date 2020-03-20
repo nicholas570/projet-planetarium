@@ -35,14 +35,17 @@ if(mapButton) {
 
 const cards = document.body.querySelectorAll('.card');
 
-cards.forEach(elt => {
+/* cards.forEach(elt => {
     elt.style.opacity = "0";
     elt.style.transition = "opacity 450ms ease-in-out";
     window.setTimeout(()=>{
         elt.style.opacity = "1";
     }, 1000);
+}); */
+
+/* ------------ Scroll Event ---------------------------- */
+const screenHeight = screen.height;
+console.log("Hauteur écran : "+screen.height);
+cards.forEach(elt => {
+    console.log(elt.offsetTop);
 });
-
-
-
-
