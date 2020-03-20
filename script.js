@@ -9,6 +9,7 @@ function moveMenu(){
 
 burger.addEventListener("click", moveMenu);
 
+<<<<<<< HEAD
 /* Questionnaire */
 
 const question1 = document.getElementsByName('question1');
@@ -25,3 +26,22 @@ const scoreFunction = () => {const result = parseInt(question1.value || 0)
         console.log(document.getElementsByName('score').innerHTML = `${result}`);
 
 };
+=======
+
+/* ------------ GoogleMap---------------------------- */
+
+const mapButton = document.body.querySelector('#map-button');
+const googleMap = document.body.querySelector('#google-map');
+
+function mapShow() {
+    googleMap.classList.replace('hidden', 'visible');
+}
+
+function mapHide() {
+    googleMap.classList.replace('visible', 'hidden');
+}
+
+mapButton.addEventListener('click', mapShow);
+googleMap.addEventListener('click', mapHide);
+
+>>>>>>> aefb8e5942fa3101a479473212f50dc8be097cde
