@@ -10,4 +10,19 @@ function moveMenu(){
 burger.addEventListener("click", moveMenu);
 
 
-/* Questionnaire */
+/* ------------ GoogleMap---------------------------- */
+
+const mapButton = document.body.querySelector('#map-button');
+const googleMap = document.body.querySelector('#google-map');
+
+function mapShow() {
+    googleMap.classList.replace('hidden', 'visible');
+}
+
+function mapHide() {
+    googleMap.classList.replace('visible', 'hidden');
+}
+
+mapButton.addEventListener('click', mapShow);
+googleMap.addEventListener('click', mapHide);
+
