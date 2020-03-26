@@ -27,19 +27,6 @@ mapButton.addEventListener('click', mapShow);
 googleMap.addEventListener('click', mapHide);
 
 
-/* ------------ Cards apparitions---------------------------- */
-
-const cards = document.body.querySelectorAll('.card');
-
-cards.forEach(elt => {
-    elt.style.opacity = "0";
-    elt.style.transition = "opacity 450ms ease-in-out";
-    window.setTimeout(()=>{
-        elt.style.opacity = "1";
-    }, 500);
-});
-
-
 /* ------------ Scroll Event ---------------------------- */
 const screenHeight = screen.height;
 

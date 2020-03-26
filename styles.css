@@ -107,9 +107,7 @@ h2{
 }
 
 /* main */
-body {
-    background-color: var(--body-color-bkg);
-}
+
 
 .card {
     width: var(--card-width);
@@ -143,7 +141,7 @@ header {
     color: var(--header-footer-color-font);
     display: grid;
     grid-template-columns: var(--header-grid-template-column);
-    box-shadow: var(--header-box-shadow);
+
 }
 
 header a {
@@ -491,7 +489,6 @@ footer {
     padding: 3rem 5rem 3rem 5rem;
     background-color: var(--header-footer-color-bkg);
     color: var(--header-footer-color-font);
-    box-shadow: var(--footer-box-shadow);
 }
 
 footer a {
@@ -727,10 +724,6 @@ footer a {
     border-radius: 50%;
     background-size: cover;
     align-self: center;
-
-    -webkit-box-shadow: -7px 7px 22px -2px rgba(110,107,110,1);
--moz-box-shadow: -7px 7px 22px -2px rgba(110,107,110,1);
-box-shadow: -7px 7px 22px -2px rgba(110,107,110,1);
 }
 
 .apropos .apropos-texts {
